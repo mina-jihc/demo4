@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+      }
+      * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .top {
+        display: grid;
+        grid-template-columns: repeat(3, 400px 500px 400px);
+        width: 1300px;
+        height: 800px;
+      }
+      .box1 {
+        background-color: black;
+        position: relative;
+      }
+      .box1 h1 {
+        color: white;
+        position: absolute;
+        top: 200px;
+        left: 245px;
+      }
+      .box2 {
+        background-color: rgb(39, 55, 55);
+        position: relative;
+        z-index: 1;
+      }
+      .box2 h1 {
+        position: absolute;
+        top: 238px;
+        z-index: 2;
+      }
+      .box3 {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        position: relative;
+      }
+      .box3 p {
+        position: absolute;
+        top: 250px;
+        font-size: 14px;
+        z-index: 2;
+      }
+      .box3 button {
+        background-color: black;
+        border: none;
+        height: 45px;
+        width: 180px;
+        cursor: pointer;
+        position: absolute;
+        top: 380px;
+        border-right: 30px solid orange;
+      }
+      .box3:hover button {
+        opacity: 0.8;
+        color: black;
+        background-color: aliceblue;
+        font-weight: bold;
+      }
+      a {
+        color: white;
+      }
+      .center {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 1300px;
+        height: 900px;
+        gap: 15px;
+        margin-top: 80px;
+      }
+      .box4 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-color: black;
+      }
+      .box5 {
+        grid-column: 3/6;
+        grid-row: 1/2;
+        background-color: aliceblue;
+      }
+      .box6 {
+        grid-column: 1/4;
+        grid-row: 2/4;
+        background-color: rgb(126, 89, 89);
+      }
+      .box7 {
+        grid-column: 4/6;
+        grid-row: 2/3;
+        background-color: beige;
+      }
+      .box8 {
+        grid-column: 4/6;
+        grid-row: 3/4;
+        background-color: white;
+        border: 1px solid black;
+      }
+      .bottom {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        height: 170px;
+        width: 100%;
+        margin-top: 340px;
+        gap: 60px;
+      }
+      .bottom p {
+        color: white;
+        padding-top: 20px;
+      }
+      .bottom button {
+        border: none;
+        background-color: black;
+        color: white;
+        height: 25px;
+        width: 60px;
+        padding-top: 30px;
+        cursor: pointer;
+      }
+      .bottom:hover button {
+        opacity: 0.7;
+      }
+      h4 {
+        color: white;
+        padding-top: 20px;
+        padding-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="box1">
+        <h1>MODERN<br />ART GAL</h1>
+      </div>
+      <div class="box2">
+        <img
+          style="width: 100%; height: 100%; object-fit: cover"
+          src="images/photo-1.png"
+        />
+        <h1>LERY</h1>
+      </div>
+      <div class="box3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur<br />
+          adipisicing elitr quisquam optio deleniti itaque officia.<br />
+          Inventore deserunt ab libero dolorum<br />
+          magni essee? Adipisci, aperiam quam.
+        </p>
+        <button><a href="location.html">OUR LOCATION</a></button>
+      </div>
+    </div>
+    <div class="center">
+      <div class="box4">
+        <h2 style="padding: 20px; color: white;">YOUR DAY AT<br />THE GALLERY</h2>
+        <p style="color: white; padding-left: 20px;">
+          Lorem ipsum, dolor sit amet consectetur adipi<br />sicing elit.
+          Impedit nemo a dicta obcaecati <br />enim numquam dolor quisquam eum
+          ea consectetur quia pariatur <br />itaqumet neque corrupti minima
+          quod.
+        </p>
+      </div>
+      <div class="box5">
+        <img
+          style="width: 100%; height: 100%; object-fit: cover"
+          src="images/photo-2.png"
+        />
+      </div>
+      <div class="box6">
+        <img
+          style="width: 100%; height: 100%; object-fit: cover"
+          src="images/photo-3.png"
+        />
+      </div>
+      <div class="box7">
+        <img
+          style="width: 100%; height: 100%; object-fit: cover"
+          src="images/photo-4.png"
+        />
+      </div>
+      <div class="box8">
+        <h2 style="padding: 20px">COME & BE<br />INSPIRED</h2>
+        <p style="padding: 20px;">
+          Lorem ipsum, dolor sit amet consectetur adipi<br />sicing elit.
+          Impedit nemo a dicta obcaecati <br />enim numquam dolor quisquam eum
+          ea consectetur quia pariatur <br />itaqumet neque corrupti minima
+          quod.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div class="bottom">
+        <h4>MODERN<br />ART GALLERY</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi id
+          <br />aliquid totam adipisci nulla illo distinctio sequi earum iusto
+          pariatu<br />r aperiam asperiores repudiandae dolorum ea digniss<br />imos
+          molestias, sed, beatae ullam.
+        </p>
+        <button>Facebook</button>
+        <button>Instagram</button>
+        <button>Twitter</button>
+      </div>
+    </footer>
+  </body>
+</html>

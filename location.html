@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        font-family: sans-serif;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .top {
+        width: 100%;
+        height: 500px;
+        position: relative;
+      }
+      .map {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+      }
+      .button {
+        background-color: black;
+        width: 180px;
+        height: 50px;
+        font-size: 20px;
+        color: white;
+        border: none;
+      }
+
+      .button:hover {
+        background-color: gray;
+      }
+      .icon {
+        position: absolute;
+        z-index: 3;
+        height: 80px;
+        width: 60px;
+
+        top: 45%;
+        left: 45%;
+      }
+      .med {
+        background-color: black;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 130px;
+      }
+      .end {
+        background-color: rgb(254, 175, 105);
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button-div {
+        display: flex;
+        width: 250px;
+        height: 50px;
+        position: absolute;
+        z-index: 2;
+        top: 30px;
+        left: 50px;
+      }
+      .orange-box {
+        background-color: rgb(254, 175, 105);
+        width: 40px;
+        height: 50px;
+      }
+      .orange {
+        color: rgb(254, 175, 105);
+      }
+      .med-1 {
+        width: 400px;
+      }
+      .end {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+      }
+      @media screen and(max-width:750px) {
+        .container {
+          width: 750px;
+          display: flex;
+          flex-direction: column;
+        }
+        .top {
+          width: 80%;
+          height: 500px;
+          position: relative;
+        }
+        .map {
+          width: 750px;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+        }
+        .button {
+          background-color: black;
+          width: 180px;
+          height: 50px;
+          font-size: 20px;
+          color: white;
+          border: none;
+        }
+
+        .button:hover {
+          background-color: gray;
+        }
+        .icon {
+          position: absolute;
+          z-index: 3;
+          height: 80px;
+          width: 60px;
+          left: 50%;
+          top: 50%;
+        }
+        .med {
+          background-color: black;
+          height: 400px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 50px;
+        }
+        .end {
+          background-color: rgb(254, 175, 105);
+          width: 80%;
+          height: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .button-div {
+          display: flex;
+          width: 250px;
+          height: 50px;
+          position: absolute;
+          z-index: 2;
+          top: 30px;
+          left: 50px;
+        }
+        .orange-box {
+          background-color: rgb(254, 175, 105);
+          width: 40px;
+          height: 50px;
+        }
+        .orange {
+          color: rgb(254, 175, 105);
+        }
+        .med-1 {
+          width: 400px;
+        }
+        .end {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 150px;
+        }
+      }
+      @media screen and(max-width:350px) {
+        .container {
+          width: 350px;
+          display: flex;
+          flex-direction: column;
+        }
+        .top {
+          width: 100%;
+          height: 500px;
+          position: relative;
+        }
+        .map {
+          width: 750px;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+        }
+        .button {
+          background-color: black;
+          width: 180px;
+          height: 50px;
+          font-size: 20px;
+          color: white;
+          border: none;
+        }
+
+        .button:hover {
+          background-color: gray;
+        }
+        .icon {
+          position: absolute;
+          z-index: 3;
+          height: 80px;
+          width: 60px;
+          left: 50%;
+          top: 50%;
+        }
+        .med {
+          background-color: black;
+          height: 1400px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .end {
+          background-color: rgb(254, 175, 105);
+          width: 100%;
+          height: 700px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .button-div {
+          display: flex;
+          width: 250px;
+          height: 50px;
+          position: absolute;
+          z-index: 2;
+          top: 30px;
+          left: 50px;
+        }
+        .orange-box {
+          background-color: rgb(254, 175, 105);
+          width: 40px;
+          height: 50px;
+        }
+        .orange {
+          color: rgb(254, 175, 105);
+        }
+        .med-1 {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <img class="map" src="images/photo-5.png" />
+        <div class="button-div">
+          <div class="orange-box"></div>
+          <button class="button">
+            <a style="color: white" href="index.html">Back to Home</a>
+          </button>
+        </div>
+        <img class="icon" src="images/location.png" />
+      </div>
+      <div class="med">
+        <h1 style="color: white; font-size: 30px; font-weight: 400">
+          OUR<br />
+          LOCATION
+        </h1>
+        <div class="med-1">
+          <h2 class="orange">99 KING STREET</h2>
+          <p style="color: gray; line-height: 25px">
+            Newport<br />
+            R1 02840<br />
+            United states of America<br />
+            Our newly opened galllery is located near the Edward King House on
+            99 King Street,the Modern Art Gallery is free to all visitors and
+            open seven days a week from 8am to 9pm
+          </p>
+        </div>
+      </div>
+      <div class="end">
+        <h1 style="color: black">
+          MODERN<br />
+          ART GALLERY
+        </h1>
+        <p style="width: 300px">
+          The Modern art Gallery is free to all visitors and open seven days a
+          week from 8am to 9pm.Find us at 99 King Street ,Newport,USA.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
